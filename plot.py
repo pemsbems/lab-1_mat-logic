@@ -5,7 +5,7 @@ def plot_datasets(datasets, indices):
         print("Нет наборов для отображения.")
         return
 
-    colors = ['yellow', 'red']  # цвета по порядку
+    colors = ['yellow', 'red'] 
 
     plt.figure()
     for i, idx in enumerate(indices):
