@@ -5,11 +5,16 @@ def plot_datasets(datasets, indices):
         print("Нет наборов для отображения.")
         return
 
-    plt.figure()
-    for idx in indices:
-        ds = datasets[idx]
-        plt.scatter(ds['x'], ds['y'])
+    colors = ['yellow', 'red']  # цвета по порядку
 
+    plt.figure()
+    for i, idx in enumerate(indices):
+        ds = datasets[idx]
+        plt.scatter(ds['x'], ds['y'],
+                    s=8,                          
+                    color=colors[i % len(colors)],
+                    edgecolors='black',           
+                    linewidths=0.5)
 
     plt.xlabel('x')
     plt.ylabel('y')
